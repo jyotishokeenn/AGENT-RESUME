@@ -12,6 +12,11 @@ from PIL import Image
 import pandas as pd
 import numpy as np
 #============API KEY==================
+GOOGLE_API_KEY= "AQ.Ab8RN6Ln9Q6bf9vmUDVVW1ZAl7AoM9-XOlNubgHOz7AKcw2cXw"
+GROQ_API_KEY = "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"
+TAVILY_API_KEY = "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"
+
+#==============MODEL=======================
 model= ChatGoogleGenerativeAI(
     model= 'gemini-3.5-flash-lite',
     google_api_key= GOOGLE_API_KEY
