@@ -24,10 +24,10 @@ st.title("AI RESUME GENERATOR")
 st.write("""This app helps user to build customized Professional
 Resume with Latest Job apply links""")
 
-st.image("https://agent-resume-2ubuappghluqwx8rbevwsv8.streamlit.app/~/+/media/47bef6a7f4b785fad0b040464d9f10bf.png")
+st.image("https://raw.githubusercontent.com/jyotishokeenn/AGENT-RESUME/refs/heads/main/bg.png")
 
 st.sidebar.title("Fill Important Details")
-st.sidebar.image("https://agent-resume-2ubuappghluqwx8rbevwsv8.streamlit.app/~/+/media/47bef6a7f4b785fad0b040464d9f10bf.png")
+st.sidebar.image("https://raw.githubusercontent.com/jyotishokeenn/AGENT-RESUME/refs/heads/main/bg.png")
 
 
 
