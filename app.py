@@ -13,6 +13,14 @@ import pandas as pd
 import numpy as np
 
 
+# To show web-app: complete page layout
+st.set_page_config(layout="wide")
+
+# To Give Title
+st.title("AI RESUME GENERATOR")
+st.write("""This app helps user to build customized Professional Resume with Latest Job Apply Links""")
+
+st.image("bg.png")
 
 #============API KEY==================
 
