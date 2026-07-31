@@ -20,7 +20,9 @@ st.set_page_config(layout="wide")
 st.title("AI RESUME GENERATOR")
 st.write("""This app helps user to build customized Professional Resume with Latest Job Apply Links""")
 
-st.image("bg.png")
+st.image("https://agent-resume-2ubuappghluqwx8rbevwsv8.streamlit.app/~/+/media/47bef6a7f4b785fad0b040464d9f10bf.png")
+
+
 
 #============API KEY==================
 
@@ -28,11 +30,6 @@ GOOGLE_API_KEY= "AQ.Ab8RN6Ln9Q6bf9vmUDVVW1ZAl7AoM9-XOlNubgHOz7AKcw2cXw"
 GROQ_API_KEY = "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"
 TAVILY_API_KEY = "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"
 
-#============MODEL====================
-model= ChatGoogleGenerativeAI(
-    model= 'gemini-3.5-flash-lite',
-    google_api_key= GOOGLE_API_KEY
-)
 
 #response= model.invoke("Hello Buddy!")
 #response.content[-1]['text']
@@ -125,6 +122,11 @@ if not all(all_API):
    st.stop()
 elif all(all_API):
    st.success("API KEYS LOADED SUCCESSFULLY")
+    #============MODEL====================
+   model= ChatGoogleGenerativeAI(
+   model= 'gemini-3.5-flash-lite',
+   google_api_key= GOOGLE_API_KEY
+   )
 else:
    st.info("PASS ALL API-KEYS")
 
