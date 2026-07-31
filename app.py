@@ -33,9 +33,9 @@ st.sidebar.image("https://raw.githubusercontent.com/jyotishokeenn/AGENT-RESUME/r
 
 # ========API KEYS============# 
 # Step 3 API keys
-GOOGLE_API_KEY= "AQ.Ab8RN6Ln9Q6bf9vmUDVVW1ZAl7AoM9-XOlNubgHOz7AKcw2cXw"
-GROQ_API_KEY = "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"
-TAVILY_API_KEY = "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"
+TAVILY_API_KEY = st.sidebar.text_input("Tavily-API",type = "password")
+GROQ_API_KEY = st.sidebar.text_input("Groq-API",type = "password")
+GOOGLE_API_KEY = st.sidebar.text_input("Gemini-API",type = "password")
 
 all_API = [TAVILY_API_KEY,GROQ_API_KEY,
            GOOGLE_API_KEY ]
