@@ -110,3 +110,35 @@ def get_job(agent,
 
 #code= get_job(agent)
 #DISPLAY.HTML(code)
+
+all_API = [TAVILY_API_KEY, GROQ_API_KEY,
+GOOGLE_API_KEY]
+if not all(all_API):
+st.error("Must give API keys")
+st.stop()
+elif all(all_API):
+st.success("API KEYS LOADED SUCCESSFULLY")
+else:
+st.info("PASS ALL API-KEYS")
+
+#====================MULTISELECT OPTION===========================
+options = ["Delhi", "Mumbai",
+"Pune", "Banglore", "Gurugram/Gurgaon"]
+location = st.sidebar.multiselect("Select Location",
+options = options)
+profile_op = ["Data Analysts", "AI Engineer", "Gen AI Developer", "Full-Stack Dev", "Data Scientist"]
+profile = st.sidebar.multiselect("Select Job Profile",
+options = profile_op)
+
+#===================================GET USER INFO=====================================
+st.markdown("""### GET USER INFO""")
+user_info = st.text_area("""Write your Resume Description: """)
+if st.button("Generate Resume"):
+with st.spinner("Agent Running"):
+code = main_agent(agent, user_info)
+st.html(code width="stretch",
+unsafe_allow_javascript=True)
+st.divider() # to give horizontal div
+job_code = get_jobs (agent, location, profile)
+st.html(job_code width="stretch"
+unsafe_allow_javascript=True)
